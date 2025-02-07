@@ -41,14 +41,6 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Pull Docker image
-      run: |
-          docker pull codesparrow24/springboot-images
-
-    - name: Run Docker container
-      run: |
-        docker run -d -p 8081:8080 --name actions-test codesparrow24/springboot-images
-
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #    - name: Update dependency graph
