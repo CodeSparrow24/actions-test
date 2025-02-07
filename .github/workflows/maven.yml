@@ -47,7 +47,8 @@ jobs:
 
     - name: Run Docker container
       run: |
-          docker run -d --name my-container codesparrow24/springboot-images
+        docker run -d -p 8081:8080 --name actions-test codesparrow24/springboot-images
+
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #    - name: Update dependency graph
